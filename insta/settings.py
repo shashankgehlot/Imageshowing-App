@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1','sginsta.herokuapp.com']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = 'FALSE'
 
 
 
@@ -108,11 +108,11 @@ AUTHENTICATION_BACKENDS = (
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
+        'NAME': 'deesahkhmc09po',
+        'USER': 'ljiwjfflfyyjai',
+        'PASSWORD': '82090cd3b035659e81cba5c239ff7eb129976a46e9bedf2c192855fa0a22d60b',
+        'HOST': 'ec2-54-204-96-190.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
