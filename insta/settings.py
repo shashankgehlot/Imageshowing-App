@@ -26,6 +26,7 @@ import dj_database_url
 # SECURITY WARNING: keep the secret key used in production secret!
 load_dotenv(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = os.getenv("SECRET_KEY")
+
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1','sginsta.herokuapp.com']
 
 # SECURITY WARNING: don't run with debug turned on in production!
