@@ -16,13 +16,14 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+
+
 import os
 from dotenv import load_dotenv
 import dj_database_url
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
-
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 load_dotenv(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = os.getenv("SECRET_KEY")
@@ -30,7 +31,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1','sginsta.herokuapp.com']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 
@@ -152,13 +153,16 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+#location where django collect all static files
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
+
+# location where you will store your static files
+
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'insta/static')]
+# print(STATICFILES_DIRS)
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 CRISPY_TEMPLATE_PACK='bootstrap4'
