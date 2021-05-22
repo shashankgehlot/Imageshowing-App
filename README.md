@@ -5,4 +5,4 @@
 ###  User can Show mutliple pictures
 ###  App Uses Postgres as database
 ###  App Uses Django ORMS
-###  App is live on: <a href="https://sginsta.herokuapp.com/">Sginsta </a>
+###  App is live on: <a href="https://sginsta.herokuapp.com/">https://sginsta.herokuapp.com/</a>
